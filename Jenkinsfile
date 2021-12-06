@@ -1,9 +1,8 @@
 pipeline {
-    agent {
-        label 'master'
+    agent any
         tools{
-               maven 'apache-maven_3_8_0'
-    }
+               maven 'maven_3_8_0'
+             }
     
     stages {
         stage('Verify Branch'){
@@ -38,4 +37,4 @@ pipeline {
                }
     }
 }
-}
+
